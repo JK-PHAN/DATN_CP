@@ -1,0 +1,113 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f9f9f9;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 40%;
+}
+
+.box {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.box h3 {
+  margin-top: 0;
+  color: #007BFF;
+  text-align: center;
+}
+
+.box p {
+  margin: 5px 0;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Bố cục dạng lưới cho các ô */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Tự động điều chỉnh số cột */
+  gap: 16px; /* Khoảng cách giữa các ô */
+  margin-top: 10px;
+}
+
+/* Định dạng từng ô trong lưới */
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Định dạng biểu tượng (icon) */
+.icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 8px;
+}
+
+/* Định dạng văn bản trong các ô */
+.grid-item p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.chart-container {
+  width: 55%;
+}
+
+button {
+  display: block;
+  margin-top: 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+.scroll-container {
+  width: 100%; /* Chiều rộng vùng hiển thị */
+  overflow-x: auto; /* Kích hoạt thanh cuộn ngang */
+  overflow-y: hidden; /* Ẩn thanh cuộn dọc */
+  white-space: nowrap; /* Ngăn xuống dòng */
+  height: 400px; /* Chiều cao cố định cho biểu đồ */
+}
+
+canvas {
+  min-width: 1200px; /* Đặt chiều rộng tối thiểu lớn hơn vùng hiển thị */
+  height: 100%; /* Đảm bảo biểu đồ chiếm toàn bộ chiều cao */
+}
